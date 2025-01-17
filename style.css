@@ -1,91 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@font-face {
+  font-family: 'Karate';
+  src: url('fonts/karate/Karate.ttf') format('truetype');
+}
 
 body {
-  background: #06BDC1;
-  background: -webkit-radial-gradient(center, #06BDC1, #68469F);
-  background: -moz-radial-gradient(center, #06BDC1, #68469F);
-  background: radial-gradient(ellipse at center, #06BDC1, #68469F);
-}
-
-.app {
-  width: 1280px;
-  margin: auto;
-}
-
-.quotes-container {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 
-.inner-quotes-container {
+.quote-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  height: 400px;
+}
+
+.quote-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.quote-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.quote {
+  position: absolute;
+  top: 50%;
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Align center vertically and horizontally */
+  font-size: 2.5rem;
+  font-family: 'Karate', serif;
+  font-style: normal;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 15px 30px;
+  background-color: rgba(0, 0, 0, 0.1); 
+  width: 70%; /* Limit width to 70% of container */
+  text-align: center; /* Center text alignment */
+}
+
+
+.author {
+  position: absolute;
+  bottom: 30px;
+  right: 30px; 
+  font-size: 1.5rem;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.buttons {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 900px;
-  text-align: center;
-  min-height: 400px;
-  padding: 0 25px;
-  color: gray;
-  border-radius: 10px;
-  background-color: #F4EDEA;
-  border: 10px solid #06BDC1;
-  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.9);
+  gap: 20px;
+  position: absolute;
+  bottom: 20px;
 }
 
-.inner-quotes-container p {
-  font-size: 1.5rem;
-  color: black;
-}
-
-.inner-quotes-container h3 {
-  font-size: 2rem;
-  color: black;
-  font-family: 'Dancing Script', cursive;
-}
-
-.quote-btn {
-  padding-top: 25px;
-}
-
-@media(max-width:1280px) {
-  .container {
-    width: 95%;
-  }
-}
-
-@media(max-width:900px) {
-  .inner-quotes-container {
-    width: 100%;
-  }
-}
-
-@media(max-width:480px) {
-  .inner-quotes-container p {
-    font-size: 1.2rem;
-  }
-
-  .inner-quotes-container h3 {
-    font-size: 1.5rem;
-  }
-}
-
-/* Twitter Button Style */
-#twitter-btn button {
-  background-color: #1da1f2; /* Twitter's blue color */
+.btn {
+  padding: 12px 25px;
+  font-size: 1.2rem;
   color: white;
+  background: #007bff;
   border: none;
-  padding: 10px 15px;
   border-radius: 5px;
-  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 15px; /* Optional: space between quote and button */
+  transition: 0.3s;
 }
 
-#twitter-btn button:hover {
-  background-color: #0d8de1; /* Slightly darker shade on hover */
+.btn:hover {
+  background: #0056b3;
 }
+
+#canvas {
+  display: none;
+}
+
+.canvas-quote {
+  font-size: 2.5rem;
+  font-family: 'Noto Serif JP', serif;
+  font-style: normal;
+  color: #000;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.canvas-author {
+  font-size: 1.5rem;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+  color: #000;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+

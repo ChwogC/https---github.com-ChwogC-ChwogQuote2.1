@@ -1,62 +1,205 @@
-const quotes = {
-    "- Walt Disney": '"The Way Get Started Is To Quit Talking And Begin Doing."',
-    "- Winston Churchill": '"The Pessimist Sees Difficulty In Every Opportunity. The Optimist Sees Opportunity In Every Difficulty."',
-    "- Will Rogers": '"Don’t Let Yesterday Take Up Too Much Of Today."',
-    "- Unknown": '"You Learn More From Failure Than From Success. Don’t Let It Stop You. Failure Builds Character."',
-    "- Vince Lombardi": '"It’s Not Whether You Get Knocked Down, It’s Whether You Get Up."',
-    "- Mahatma Gandhi": '"Live as if you were to die tomorrow. Learn as if you were to live forever"',
-    "- Martin Luther King Jr": '"Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that."',
-    "- Albert Einstein": '"Strive not to be a success, but rather to be of value."',
-    "- Florence Nightingale": '"I attribute my success to this: I never gave or took any excuse."',
-    "- Michael Jordan": '"I missed more than 9000 shots in my career. I lost almost 300 games. 26 times I been trusted to take the game winning shot and missed. I failed over and over and over again in my life. And that is why I succeed."',
-    "- Babe Ruth": '"Every strike brings me closer to the next home run."',
-    "- John Lennon": '"Life is what happens to you while you’re busy making other plans."',
-    "- Earl Nightingale": '"We become what we think about."',
-    "- Mark Twain": '"Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do, so throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails.  Explore, Dream, Discover."',
-    "- Charles Swindoll": '"Life is 10% what happens to me and 90% of how I react to it."',
-    "- Buddah": '"The mind is everything. What you think you become."',
-    "- Chinese Proverb": '"The best time to plant a tree was 20 years ago. The second best time is now."',
-    "- Woody Allen": '"Eighty percent of success is showing up."',
-    "- Steve Jobs": '"Your time is limited, so don’t waste it living someone else’s life."',
-    "- Vince Lombardi": '"Winning isn’t everything, but wanting to win is."',
-    "- Stephen Covey": '"I am not a product of my circumstances. I am a product of my decisions. "',
-    "- Christopher Columbus": '"You can never cross the ocean until you have the courage to lose sight of the shore."',
-    "- Maya Angelou": '"I’ve learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel. "',
-    "- Jim Rohn": '"Either you run the day, or the day runs you."',
-    "- Henry Ford": '"Whether you think you can or you think you can’t, you’re right."',
-    "- Frank Sinatra": '"The best revenge is massive success."',
-    "- Zig Ziglar": '"People often say that motivation doesn’t last. Well, neither does bathing.  That’s why we recommend it daily."',
-    "- Aristotle": '"There is only one way to avoid criticism: do nothing, say nothing, and be nothing"',
-    "- Jesus": '"Ask and it will be given to you; search, and you will find; knock and the door will be opened for you."',
-    "- Ralph Waldo Emerson": '"The only person you are destined to become is the person you decide to be."',
-    "- Henry David Thoreau": '"Go confidently in the direction of your dreams.  Live the life you have imagined."',
-    "- Erma Bombeck": '"When I stand before God at the end of my life, I would hope that I would not have a single bit of talent left and could say, I used everything you gave me."',
-    "- Booker T. Washington": '"Few things can help an individual more than to place responsibility on him, and to let him know that you trust him."'
+const quotes = [
+
+"Fall seven times, stand up eight.",
+"The shortest distance between two points is not always a straight line.",
+"Empty your cup so that it may be filled; open your hand so that you may receive.",
+"The bamboo that bends in the wind survives the storm.",
+"A journey of a thousand miles begins with a single step.",
+"The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.",
+"He who knows others is wise; he who knows himself is enlightened.",
+"The best time to plant a tree was twenty years ago. The second best time is now.",
+"Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
+"The greatest glory in living lies not in never falling, but in rising every time we fall.",
+"The crane lives a thousand years.",
+"The tortoise outlives the hare.",
+"The owl sees in the dark.",
+"The butterfly emerges from the chrysalis.",
+"The frog in the well knows only its own well.",
+"The monkey sees, the monkey does.",
+"The carp leaps the dragon gate.",
+"The cicada sings its song in the summer heat.",
+"The spider spins its web patiently.",
+"The cat that plays with a mouse will eventually catch it.",
+"Love is like the moon, it waxes and wanes.",
+"True love is like a fire, it needs constant tending.",
+"A gentle word can turn away wrath.",
+"Forgive your enemies, but never forget their names.",
+"The family that prays together stays together.",
+"Honor your elders.",
+"Kindness is a language which the deaf can hear and the blind can see.",
+"A true friend is one who knows you well and loves you anyway.",
+"Love is patient, love is kind. It does not envy, it does not boast, it is not proud.",
+"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
+"The journey itself is the reward.",
+"A closed mouth catches no flies.",
+"Look before you leap.",
+"Two heads are better than one.",
+"The early bird gets the worm.",
+"Fortune favors the bold.",
+"The squeaky wheel gets the grease.",
+"Cleanliness is next to godliness.",
+"Honesty is the best policy.",
+"Respect your elders.",
+"The mountains are the bones of the earth.",
+"The river flows ever onward.",
+"The cherry blossoms bloom briefly but beautifully.",
+"The wind whispers secrets.",
+"The moon reflects the sun's light.",
+"The rain falls on the just and the unjust.",
+"The ocean is vast and deep.",
+"The bamboo bends but does not break.",
+"The pine tree stands tall in the winter wind.",
+"The willow tree bends gracefully in the breeze.",
+"The mind is a monkey.",
+"The only way to overcome an enemy is to make him a friend.",
+"He who knows others is wise, he who knows himself is enlightened.",
+"The greatest glory in living lies not in never falling, but in rising every time we fall.",
+"The journey of a thousand miles begins with a single step.",
+"Where there's a will, there's a way.",
+"The early bird catches the worm.",
+"Two heads are better than one.",
+"Look before you leap.",
+"Honesty is the best policy.",
+"Actions speak louder than words.",
+"Treat others as you would like to be treated.",
+"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
+"Love is 1  patient, love is kind.",
+"The family that prays together stays together.",
+"Honor your elders.",
+"Kindness is a language which the deaf can hear and the blind can see.",
+"A true friend is one who knows you well and loves you anyway.",
+"Forgive your enemies, but never forget their names.",
+"The greatest wealth is to be content with little.",
+"The mind is everything. What you think you become.",
+"The only person you are destined to become is the person you decide to be.",
+"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",  
+"Love is patient, love is kind.",
+"The family that prays together stays together.",
+"Honor your elders.",
+"Kindness is a language which the deaf can hear and the blind can see.",
+"A true friend is one who knows you well and loves you anyway.",
+"Forgive your enemies, but never forget their names.",
+"The greatest wealth is to be content with little.",
+"The mind is everything. What you think you become.",
+"The only person you are destined to become is the person you decide to be.",
+"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.", 
+"Love is patient, love is kind.",
+"The family that prays together stays together.",
+"Honor your elders.",
+"Kindness is a language which the deaf can hear and the blind can see.",
+"A true friend is one who knows you well and loves you anyway.",
+"Forgive your enemies, but never forget their names.",
+"The greatest wealth is to be content with little.",
+"The mind is everything. What you think you become.",
+"The only person you are destined to become is the person you decide to be.",
+"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.", 
+"Love is patient, love is kind.",
+"The family that prays together stays together.",
+"Honor your elders.",
+"Kindness is a language which the deaf can hear and the blind can see.",
+"A true friend is one who knows you well and loves you anyway.",
+"Forgive your enemies, but never forget their names.",
+"The greatest wealth is to be content with little.",
+"The mind is everything. What you think you become.",
+"The only person you are destined to become is the person you decide to be."
+];
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const quoteImage = document.getElementById('quote-image');
+const quoteElement = document.getElementById('quote');
+
+function generateQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  const randomQuote = quotes[randomIndex];
+  quoteElement.textContent = `"${randomQuote}"`;
+}
+
+function tweetQuote() {
+  const quote = quoteElement.innerText;
+  const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(quote)}`;
+  window.open(tweetUrl, "_blank");
+}
+
+function downloadQuote() {
+  // Set canvas dimensions to 1200x675
+  canvas.width = 1200;
+  canvas.height = 675;
+
+  // Draw the background image
+  ctx.drawImage(quoteImage, 0, 0, canvas.width, canvas.height);
+
+  // Extract and apply quote styles
+  const quoteStyle = getComputedStyle(quoteElement);
+  // Increase the font size by 2 (parse font size as a number and add 2)
+  const fontSize = parseInt(quoteStyle.fontSize) + 2; 
+  ctx.font = `${fontSize}px ${quoteStyle.fontFamily}`;
+  ctx.fillStyle = quoteStyle.color;
+  ctx.textAlign = "left"; // Align text to start from the left
+  ctx.textBaseline = "middle";
+
+  // Set maximum text width to 70% of canvas (to avoid covering the frog)
+  const maxWidth = canvas.width * 0.7;
+  const textX = 10; // Start 10px from the left edge
+  const textY = canvas.height / 2; // Center vertically
+  const lineHeight = fontSize + 10; // Adjust based on new font size
+
+  // Measure text and calculate background dimensions
+  const wrappedText = wrapTextAndMeasure(ctx, quoteElement.innerText, textX, textY, maxWidth, lineHeight);
+  const textHeight = wrappedText.lines.length * lineHeight;
+  const rectWidth = maxWidth + 20; // Add padding to the right
+  const rectHeight = textHeight + 20; // Add padding to top and bottom
+  const rectX = 0; // Background starts at the left edge
+  const rectY = textY - textHeight / 2 - 10;
+
+  // Draw the semi-transparent gray background (with more transparency)
+  ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
+  ctx.fillRect(rectX, rectY, rectWidth, rectHeight);
+
+  // Draw the text on top of the background
+  ctx.fillStyle = quoteStyle.color;
+  wrappedText.lines.forEach((line, index) => {
+    ctx.fillText(line, textX, textY + index * lineHeight - textHeight / 2 + lineHeight / 2);
+  });
+
+  // Export the canvas as an image
+  const dataURL = canvas.toDataURL("image/png");
+  const link = document.createElement("a");
+  link.href = dataURL;
+  link.download = "quote.png";
+  link.click();
+}
+
+// Utility function for wrapping text and measuring
+function wrapTextAndMeasure(context, text, x, y, maxWidth, lineHeight) {
+  const words = text.split(" ");
+  let line = "";
+  const lines = [];
+
+  for (let i = 0; i < words.length; i++) {
+    const testLine = line + words[i] + " ";
+    const testWidth = context.measureText(testLine).width;
+
+    if (testWidth > maxWidth && i > 0) {
+      lines.push(line);
+      line = words[i] + " ";
+    } else {
+      line = testLine;
+    }
+  }
+
+  lines.push(line);
+
+  return {
+    lines,
+    width: maxWidth,
+    height: lines.length * lineHeight,
   };
-
-
-document.querySelector("#generate").addEventListener("click", () => {
-  generate();
-});
-
-function generate(){
-  // grab all the keys in the dictionary (authors) and store in an array
-  const authors = Object.keys(quotes);
-  // grab a random key (author) and store it in author
-  const author = authors[Math.floor(Math.random() * authors.length)];
-  // grab the value(quote) that belongs to that key
-  const quote = quotes[author]
-
-  document.querySelector("#quote").textContent = quote;
-  document.querySelector("#author").textContent = author;
-
-  // Update Twitter button
-  const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-    `${quote} - ${author}`
-  )}`;
-  document.querySelector("#twitter-btn").setAttribute("href", twitterUrl);
 }
 
-window.onload = function(){
-  generate()
-}
+
+
+
+
+// Initial quote generation
+generateQuote();
